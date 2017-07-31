@@ -1,0 +1,31 @@
+Briefly describe your understanding of what the browser does, including definitions of the following:
+  The browser has a conversation with another computer, and retrieves and delivers information from it to me. If I am surfing the web, my computer browser (the client), reaches out to another computer (the server) and asks it for the files I want, and renders those files into a human-viewable document. The browser is essentially a computer-to-human translator.
+client -- the computer that is asking for files.
+server -- the computer that is providing files.
+render -- Rendering is the process of converting text and image data into a human-viewable document.
+
+
+What is HTML? In your answer, include definitions of the following:
+  HTML stands for Hyper-Text Markup Language and is one of the languages that my browser speaks when requesting and rendering data.
+tag - < > is a tag. Various texts go within a tags angle brackets and multiple tags make up an HTML document.
+element - is the simplest building block of text in HTML. Elements go within tags.
+node - everything within an HTML document is a node (the document itself, all HTML elements and attributes, text inside HTML elements, et cetera). These nodes collectively make up the tree that is an HTML document.
+attribute - used to define the characteristics of an HTML element and is placed inside the element's opening tag.
+block element - occupies the entire space of its parent element (container), thereby creating a "block" which can be collectively stylized.
+inline element - a container that occupies only the space bounded by the tags that define the inline element.
+
+
+Very briefly, explain the purpose of the following elements:
+head - This is the first section of a standard HTML document. The data viewed on the page does NOT go in this section, it is just for metadata.
+body - This is where the main text and HTML elements go, and is what shows up in the main section of the webpage.
+p - This is a paragraph element, and is one basic format within which you add text to your webpage.
+form - a form in HTML is an element that allows the user to input data which is then sent to a server for processing.
+div - div's are a utility element used to format a document into different sections.
+span - like div, used to define a section of a document so as to stylize it separately later.
+select - this creates a drop-down list from which you can select input in a form.
+h2 - This is a header tag that makes text between its tags smaller than an h1 tag but bigger than an h2 tag.
+ol - stands for ordered list, and creates a numbered list out of your list items.
+ul - stands for unordered list, and creates a bullet point list out of your list items.
+table - creates a table within the document, which has rows, table data and table headers.
+tr - "table row", designates a single row within a table, within which you can put table data cells.
+td - "table data", designates a single cell within a table's row, within which you can put data.
