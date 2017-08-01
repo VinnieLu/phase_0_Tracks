@@ -1,3 +1,24 @@
+@media only screen and (max-width: 320px) {
+
+   h1 {
+      font-size: 2em;
+   }
+
+}
+
+@media only screen and (orientation: landscape) {
+    body {
+        background-color: lightgreen;
+    }
+}
+
+#wrapper { width: 1000px; margin: 0 auto; }
+
+body {
+  max-width: 80%;
+  display: inline-block;
+}
+
 blockquote {
   border-left: 5px solid blue;
   padding: 15px;
@@ -11,11 +32,22 @@ cite {
 
 #external-links ul {
   list-style-type: none;
-  padding-left: 0px;
+  padding: 10px;
+}
+
+#external-links {
+  width: 20%;
+  float: left;
+}
+
+main {
+  width: 80%;
+  float: left;
+
 }
 
 /* you're welcome to edit the
-image, figure, and figcaption CSS if you'd like, 
+image, figure, and figcaption CSS if you'd like,
 but it's optional! */
 img {
   width: 100%;
@@ -30,3 +62,10 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+
+/*@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+}*/
