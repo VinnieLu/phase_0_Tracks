@@ -1,0 +1,11 @@
+-Press the call button outside the elevator.
+-Wait in front of the elevator for  the doors to open.
+-Enter the elevator and turn around.
+  -If there are other elevator riders:
+    -Ask out loud "What floors?"
+    -Press the button for your floor and all other requested floors.
+  -Else:
+    -Press the button for your floor.
+-Wait for the doors to open.
+-Don't fart
+-When the doors open, exit the elevator.
