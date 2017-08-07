@@ -1,0 +1,43 @@
+Name at least three categories of CSS adjustments (example: colors)?
+Width, background-color, font-family, display, float, margin.
+
+What are the three ways to link a CSS rule to an HTML document? Which one is the best and why?
+1. Put your CSS rules in the head of your HTML file between these tags: <style> </style>
+2. Use inline styling by adding "style=**CSS RULES HERE**" to an individual element in your HTML page.
+3. Link to an external style sheet with "<link rel="stylesheet" type="text/css" href="**STYLE SHEET LOCATION**.css">". This is the best option because it gives you the most room to work. It also allows you to keep your CSS and HTML separated, which is easier when documents get really long.
+
+
+What is a selector? Give examples of at least three types of selectors.
+A selector is placed before your brackets {} and identifies which html elements your CSS should be applied to. An "#ID NAME HERE" selector selects an element with a certain ID name, a ".CLASS NAME HERE" selects an element with a certain class name, a "*" selects all elements, and you can also select elements by their element name. For example "p" would select all paragraph elements, and "h1" would select all h1 elements.
+
+
+What is the box model?
+HTML and CSS documents function with the box model, which means that every HTML element has a "box" wrapped around it that consists of margins, padding, borders and actual content. When styling HTML content with CSS, you can modify the margins, padding, borders and content with separate selectors, and add effects to specific areas of the box. This gives you greater control.
+
+
+Explain and give an example of the cascading effect of CSS.
+Specificity is a good example of the cascading effect of CSS. Different CSS selectors have different weights, which give them precedence in the ultimate display of a webpage. For example, inline styling has more weight than ID's, which have more weight than classes, which have more weight than elements. When deciding which effect to actually display on the webpage, CSS cascades downward through the different assignments, and if two effects are applied to the same element, whichever has the greater specificity wins out. If two are tied, the later one wins. So, for example, if you have this code:
+
+#content h1 {
+padding: 5px;
+}
+
+#content h1 {
+padding: 10px;
+}
+
+the padding would be 10px on the page, since they are equal weight but the 10px came later.
+
+
+Name two CSS techniques that assist in responsive design.
+1. Use percentages to specify image widths. For example, img {max-width: 100%} would ensure that your image fits the full width of the screen, no matter how big the screen is.
+2. Create your nav bar with two options: a traditional horizontal links menu, and a select dropdown menu. Then in your CSS, style it so that if the screen is smaller than normal, it displays the select menu instead of the horizontal menu. Your CSS could look like this:
+
+nav select {
+  display: none;
+}
+
+@media (max-width: 960px) {
+  nav ul     { display: none; }
+  nav select { display: inline-block; }
+}
