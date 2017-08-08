@@ -19,6 +19,14 @@ while i < employees do
   puts "Do you want health insurance? (y/n)"
   health_Insurance = gets.chomp
 
+  puts "Please name any allergies. Type 'done' when finished."
+  until allergy === "done"
+    allergy = gets.chomp
+    if allergy === "sunshine"
+      puts "Probably a vampire."
+    end
+  end
+
   if ((2017 - birth_Year.to_i) == age) && ( garlic_Bread == "y" || health_Insurance == "y")
     puts "Probably not a vampire."
   if ((2017 - birth_Year.to_i) != age) && ( garlic_Bread == "n" || health_Insurance == "n")
@@ -32,3 +40,5 @@ while i < employees do
   end
 i += 1
 end
+
+print "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
