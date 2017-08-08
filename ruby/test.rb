@@ -1,3 +1,6 @@
-puts stuff
+def add(x, y)
+  sum = x + y
+  p "Sum is #{sum}"
+end
 
-more stuff
+add(1, 3)
