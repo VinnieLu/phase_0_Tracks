@@ -1,0 +1,42 @@
+body {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpsSDCAx5g5dgkh5z4TUSzo5jwBVJm7zfnMSYHT29nLNjXClJccw");
+  background-repeat: repeat;
+}
+
+header {
+  background-color: #8392aa;
+  padding: 3px;
+  margin-bottom: 4px;
+  font-family: helvetica;
+}
+
+footer {
+  background-color: #8392aa;
+  margin-top: 5px;
+  padding: 3px;
+  /* clear: both; */
+}
+
+.column-1 {
+  background-color: white;
+  display: inline-block;
+  /* float: left; */
+  width: 47%;
+  vertical-align: top;
+  border: 3px solid #8392aa;
+  padding: 3px;
+}
+
+.column-2 {
+  background-color: white;
+  display: inline-block;
+  /* float: right; */
+  width: 47%;
+  vertical-align: top;
+  border: 3px solid #8392aa;
+  padding: 3px;
+}
+
+h1, h2 {
+  font-family: helvetica;
+}
