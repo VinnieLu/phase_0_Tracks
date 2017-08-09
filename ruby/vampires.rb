@@ -3,7 +3,7 @@ puts "How many employees will be processed?"
 employees = gets.chomp
 
 i = 0
-while i < employees do
+while i < employees.to_i do
 
   puts "What is your name?"
   name = gets.chomp
@@ -21,6 +21,7 @@ while i < employees do
   health_Insurance = gets.chomp
 
   puts "Please name any allergies. Type 'done' when finished."
+  allergy = gets.chomp
   until allergy === "done"
     allergy = gets.chomp
     if allergy === "sunshine"
@@ -38,7 +39,7 @@ while i < employees do
     puts "Definitely a vampire"
   else
     puts "Results inconclusive"
-  end
+    end
 i += 1
 end
 
