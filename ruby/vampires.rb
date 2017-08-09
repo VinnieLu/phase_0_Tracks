@@ -25,7 +25,7 @@ while i < employees.to_i do
   until allergy === "done"
     allergy = gets.chomp
     if allergy === "sunshine"
-      puts "Probably a vampire."
+      puts "Probably a vampire..."
     end
   end
 
