@@ -31,11 +31,11 @@ while i < employees.to_i do
 
   if ((2017 - birth_Year.to_i) == age) && ( garlic_Bread == "y" || health_Insurance == "y")
     puts "Probably not a vampire."
-  if ((2017 - birth_Year.to_i) != age) && ( garlic_Bread == "n" || health_Insurance == "n")
+  elsif ((2017 - birth_Year.to_i) != age) && ( garlic_Bread == "n" || health_Insurance == "n")
     puts "Probably a vampire."
-  if ((2017 - birth_Year.to_i) != age) && ( garlic_Bread == "n" && health_Insurance == "n")
+  elsif ((2017 - birth_Year.to_i) != age) && ( garlic_Bread == "n" && health_Insurance == "n")
     puts "Almost certainly a vampire"
-  if name == "Drake Cula" || "Tu Fang"
+  elsif name == "Drake Cula" || "Tu Fang"
     puts "Definitely a vampire"
   else
     puts "Results inconclusive"
