@@ -21,7 +21,7 @@ def encrypt(x)
       i += 1
     end
   end
-  puts string
+  string
 end
 
 #encrypt("abc")
@@ -49,15 +49,15 @@ def decrypt(x)
     string += alphabet[new_var - 1]
     i += 1
   end
-  puts string
+  string
 end
 
 
-#decrypt("bcd")
-#decrypt("afe")
+#puts decrypt("bcd")
+#puts decrypt("afe")
 
-#decrypt(encrypt("swordfish"))
-#I expected it to return "swordfish", but instead #got "txpsegjti" which means that encrypt worked, #but decrypt didn't run. When I reversed the #encrypt and decrypt, I got "rvnqcehrg", which #means that decrypt worked but encrypt didn't. #Apparently whatever is nested inside works, but #whatever's nested outside doesn't work.
+#puts decrypt(encrypt("swordfish"))
+#This returns "swordfish", which is correct because first swordfish is encrypted, then it gets decrypted. Initially I had an issue here because my "puts" were within my method, which actually returned nil instead of my string. I needed to take puts out of the method and put them into my method calls instead.
 
 
 #Ask the secret agent whether to encrypt or decrypt #his password.
