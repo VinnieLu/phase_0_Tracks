@@ -139,4 +139,22 @@ def name_change(normal_name)
   new_name
 end
 
-p name_change("Felicia Torres")
+puts "Please enter a name to change. Enter 'quit' to exit."
+name = gets.chomp
+original_names = []
+changed_names = []
+original_names << name
+  until name === "quit"
+    p altered_name = name_change(name)
+    changed_names << altered_name
+    name = gets.chomp
+    original_names << name
+  end
+
+count = 0
+while count < original_names.length
+  p "#{changed_names[count]} is actually #{original_names[count]}."
+  count += 1
+end
+
+#For office hours: First, how do I make it so "quit" is not included in my name list? Second, is there any easier solution to this problem then using a long list of if statements?
