@@ -1,0 +1,40 @@
+Review and Reflect Week 4
+VARIABLES
+1. Variables - the memory locations which hold any data to be used by any program. A programmer might use a variable to manipulate data, by assigning it to the variable and then using the variable to carry out functions.
+2. First ruby will convert first_name and last_name into two separate strings: "Abraham" and "Lincoln". Then it will concatenate those strings into "Abraham Lincoln". Then it will equate "full_name" into "Abraham Lincoln, leaving only "Abraham Lincoln".
+
+DATA TYPES
+--string: "string" is a string, as is anything else within quotation marks, including "This is a string." A number in quotation marks ("42") is also a string, as is "nil" (if it's in quotation marks) and "boolean".
+--integer: a number without any explicit decimal places (42, 24, 36). Don't need quotation marks.
+--float: a number with decimal places (42.24, 24.36, 36.4567). Don't need quotation marks.
+--nil: stands for no value (not to be confused with zero).
+--boolean: a boolean is either a true or a false (no quotation marks).
+
+ALGORITHMS
+4. An algorithm is a plan, a logical step-by-step process for solving a problem.
+5. Two common categories of algorithms in computer science are lists and arrays, or the selection sort and binary search.
+
+METHODS
+6. A method in Ruby is a set of expressions that returns a value. A programmer might use a method if they have something they have to do over and over again, and want a shortcut way to do it.
+--return value: this is the value that is returned by a method. Every method always returns one value (an object). If we don't do anything else, then a method will return the value of the last evaluated statement.
+--side effect: any observable change caused by calling a function. Examples include writing to a file, printing output, raising an exception and mutating a non-local variable. Unexpected side effects can cause bugs.
+--parameter: These are the variable names that are defined in the arguments list of the method definition.
+--argument: Similar to paramater in that it is the variable name that is defined in the arguments list of the method definition, BUT IT IS ALSO the value that is passed as part of the method call.
+  def add_two (number)
+    number + 2
+  end
+
+  puts add_two(3)
+  In this case, "number" is both a paramater and an argument, but "3" is just an argument.
+--implicit return: If you don't put a return or puts on anything in the method, the computer will automatically return the last line in the method.
+
+8. A variable declared outside of a method has global scope. Variables declared inside the method have scope local to the method. This is a useful way to keep global variables from being screwed around with in the trenches of method-land.
+
+9. Control flow is the order that function calls, instructions and statements are executed or evaluated when a program is running. The flow can be altered with things like if statements and while/until loops. Flow control is essential to controlling the behavior of a program and how it interacts with the user.
+
+10. --loop: a control flow construction that causes a piece of code to be read over and over until it satisfies a condition and breaks out of the loop.
+--if: if is a conditional statement that declares IF a certain condition is met, complete the code written on the next line.
+--else: attached to the if statement, it is a catch-all condition that says if the code met no other conditions, then run this else block of code.
+--elsif: attached to the if statement, it comes after the if statement and declares a second condition, which, if it's met, complete the code written on the next line.
+--while: used to create a while loop, which means that while a certain condition is true, run the following code.
+--until: used to create an until loop, which means that until a certain condition is true, run the following code.
