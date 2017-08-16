@@ -1,4 +1,4 @@
-#First, I'm going to swap the first and last name by calling the method "name_switch" which has one argument "normal_name", defining a variable "normal_name", splitting it into an array on the space with .split, then making "normal_name[0]" equal to "normal_name[1]", and "normal_name[1]" equal to "normal_name[0]"
+#First, I'm going to swap the first and last name by calling the method "name_switch" which has one argument "normal_name", defining a variable "normal_name", splitting it into an array on the space with .split, then making "normal_name[0]" equal to "normal_name[1]", and "normal_name[1]" equal to "normal_name[0]". Then I'm going to join the array back together to make it a string.
 
 #def name_switch(normal_name)
 #  split_name = normal_name.split(" ")
@@ -10,145 +10,68 @@
 #p name_switch("felicia torres")
 
 
+#First I'll create a method called "name_change" that takes a parameter "normal_name", then I'll create a string with all lower case and upper case values and split it to make it an array. Then I'll do the same with consonants. Then I'll create an empty string called name. Then I'll write the method "each_with_index" with two paramaters "letter, letter_index". Then I'll create an if statement with the method include? And "letter" as the parameter. the answer to that if statement will be vowels.each_with_index with two paramaters vowel and vowel_index. This will have another if statement nested inside saying if the letter is equal to vowel, or if the letter is u, then shovel into new_name "a", elsif the letter is "U" then shovel into new_name "A". If any other condition exists, then shovel into new_name the vowel at index + 1. Then I'll repeat this with the consonants. Finally I'll call new_name at the end to show my result. Once this is working, I'll integrate in my method name_switch from above into the top of my method name_change.
 
-
-
-
-
-
-#Create a method "name_change". Create a loop counter at 0. Create a while loop "while <loop counter> is less than split_name.length". Then create if statements for each vowel ("aeiou") switching each vowel for its next-in-line. Then create if statements for each consonant of the alphabet, switching each for its next-in-line, skipping vowels. Then create equivalient if statements for each capital letter. Then combine the name_switch method from above into this method.
 
 def name_change(normal_name)
-  changed_name = normal_name.split(" ")
-  changed_name[0], changed_name[1] = changed_name[1], changed_name[0]
+vowels = "aeiouAEIOU".split("")
+consonants = "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ".split("")
+
+changed_name = normal_name.split(" ")
+changed_name[0], changed_name[1] = changed_name[1], changed_name[0]
   split_name = changed_name.join(" ")
-  counter = 0
-  new_name = ""
-  while counter < split_name.length
-    if split_name[counter] === "a"
-      new_name += "e"
-    elsif split_name[counter] === "e"
-      new_name += "i"
-    elsif split_name[counter] === "i"
-      new_name += "o"
-    elsif split_name[counter] === "o"
-      new_name += "u"
-    elsif split_name[counter] === "u"
-      new_name += "a"
-    elsif split_name[counter] === "b"
-      new_name += "c"
-    elsif split_name[counter] === "c"
-      new_name += "d"
-    elsif split_name[counter] === "d"
-      new_name += "f"
-    elsif split_name[counter] === "f"
-      new_name += "g"
-    elsif split_name[counter] === "g"
-      new_name += "h"
-    elsif split_name[counter] === "h"
-      new_name += "j"
-    elsif split_name[counter] === "j"
-      new_name += "k"
-    elsif split_name[counter] === "k"
-      new_name += "l"
-    elsif split_name[counter] === "l"
-      new_name += "m"
-    elsif split_name[counter] === "m"
-      new_name += "n"
-    elsif split_name[counter] === "n"
-      new_name += "p"
-    elsif split_name[counter] === "p"
-      new_name += "q"
-    elsif split_name[counter] === "q"
-      new_name += "r"
-    elsif split_name[counter] === "r"
-      new_name += "s"
-    elsif split_name[counter] === "s"
-      new_name += "t"
-    elsif split_name[counter] === "t"
-      new_name += "v"
-    elsif split_name[counter] === "v"
-      new_name += "w"
-    elsif split_name[counter] === "w"
-      new_name += "x"
-    elsif split_name[counter] === "x"
-      new_name += "y"
-    elsif split_name[counter] === "y"
-      new_name += "z"
-    elsif split_name[counter] === "z"
-      new_name += "b"
-    elsif split_name[counter] === " "
-      new_name += " "
-    elsif split_name[counter] === "A"
-      new_name += "E"
-    elsif split_name[counter] === "E"
-      new_name += "E"
-    elsif split_name[counter] === "I"
-      new_name += "O"
-    elsif split_name[counter] === "O"
-      new_name += "U"
-    elsif split_name[counter] === "U"
-      new_name += "A"
-    elsif split_name[counter] === "B"
-      new_name += "C"
-    elsif split_name[counter] === "C"
-      new_name += "D"
-    elsif split_name[counter] === "D"
-      new_name += "F"
-    elsif split_name[counter] === "F"
-      new_name += "G"
-    elsif split_name[counter] === "G"
-      new_name += "H"
-    elsif split_name[counter] === "H"
-      new_name += "J"
-    elsif split_name[counter] === "J"
-      new_name += "K"
-    elsif split_name[counter] === "K"
-      new_name += "L"
-    elsif split_name[counter] === "L"
-      new_name += "M"
-    elsif split_name[counter] === "M"
-      new_name += "N"
-    elsif split_name[counter] === "N"
-      new_name += "P"
-    elsif split_name[counter] === "P"
-      new_name += "Q"
-    elsif split_name[counter] === "Q"
-      new_name += "R"
-    elsif split_name[counter] === "R"
-      new_name += "S"
-    elsif split_name[counter] === "S"
-      new_name += "T"
-    elsif split_name[counter] === "T"
-      new_name += "V"
-    elsif split_name[counter] === "V"
-      new_name += "W"
-    elsif split_name[counter] === "W"
-      new_name += "X"
-    elsif split_name[counter] === "X"
-      new_name += "X"
-    elsif split_name[counter] === "Y"
-      new_name += "Z"
-    elsif split_name[counter] === "Z"
-      new_name += "B"
-    elsif split_name[counter] === " "
-      new_name += " "
+name = split_name.split("")
+
+new_name = ""
+name.each_with_index do |letter, letter_index|
+  if vowels.include?(letter)
+  vowels.each_with_index do |vowel, vowel_index|
+    if letter === vowel
+      if letter === "u"
+        new_name << "a"
+      elsif letter === "U"
+        new_name << "A"
+      else
+        new_name << vowels[vowel_index+1]
+      end
     end
-     counter += 1
+  end
+end
+  if consonants.include?(letter)
+  consonants.each_with_index do |consonant, consonant_index|
+    if letter === consonant
+      if letter === "z"
+        new_name << "b"
+      elsif letter === "Z"
+        new_name << "B"
+      else
+        new_name << consonants[consonant_index+1]
+      end
+    end
+  end
+end
+    if letter === " "
+      new_name << " "
+    end
   end
   new_name
 end
+
 
 puts "Please enter a name to change. Enter 'quit' to exit."
 name = gets.chomp
 original_names = []
 changed_names = []
-original_names << name
+if name != "quit"
+  original_names << name
+end
   until name === "quit"
     p altered_name = name_change(name)
     changed_names << altered_name
     name = gets.chomp
-    original_names << name
+    if name != "quit"
+      original_names << name
+    end
   end
 
 count = 0
@@ -156,5 +79,3 @@ while count < original_names.length
   p "#{changed_names[count]} is actually #{original_names[count]}."
   count += 1
 end
-
-#For office hours: First, how do I make it so "quit" is not included in my name list? Second, is there any easier solution to this problem then using a long list of if statements?
