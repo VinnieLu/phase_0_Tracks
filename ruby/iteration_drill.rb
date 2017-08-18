@@ -92,6 +92,7 @@ extinct_animals = {
 # Driver code example: is_extinct?(extinct_animals, "Andean Cat")
 # ----
 
+
 def is_extinct?(hash, animal)
   hash.each do |bird, year|
     bird === animal
@@ -99,6 +100,7 @@ def is_extinct?(hash, animal)
 end
 
 puts is_extinct?(extinct_animals, "Dodo")
+
 
 
 
