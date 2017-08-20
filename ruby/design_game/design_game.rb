@@ -51,20 +51,20 @@ class Word_guess_game
   end
 end
 
-#puts "Enter a word to be guessed:"
-#  word = gets.chomp 
-#  game = Word_guess_game.new(word)
-#  game.word_to_array(word)
-#
-#loop do
-#  if game.is_over? 
-#    if !game.win?
-#      p "You lost, biotch!"
-#    end
-#    break
-#  else
-#  puts "Guess the word:"
-#  guess = gets.chomp
-#    p game.includes_word?(guess)
-#  end
-#end
+puts "Enter a word to be guessed:"
+  word = gets.chomp 
+  game = Word_guess_game.new(word)
+  game.word_to_array(word)
+
+loop do
+  if game.is_over? 
+    if !game.win?
+      p "You lost, biotch!"
+    end
+    break
+  else
+  puts "Guess the word:"
+  guess = gets.chomp
+    p game.includes_word?(guess)
+  end
+end
