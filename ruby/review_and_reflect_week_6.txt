@@ -1,0 +1,26 @@
+1. What are classes? Be sure to define the following terms in your explanation and describe the relationships between them:
+
+--class
+--state
+--behavior
+--instance variable
+--instance method
+
+A class is a blueprint of how an object might look or behave. It is defined with a capital letter in the beginning, and might include methods which define the class' behavior. Instance variables are the variables within a class. They are private to the class, and are usually initialized at the start of a method with a method "initialize" which defines all instance variables and can also include "puts <<text>>". An instance variable is an example of the method's state. State is the class' data or knowledge. A method that is called on the larger class (such as .new) is referred to as a class method, and a method called on an instance variable (such as instance_variable.instance_method) is referred to as an instance method.
+
+
+2. What are attributes?
+In classes, attributes are the characteristics, or data or state, of the class. They are a special sort of variable that you can use instead of a class declaration. They include instance variables, which are written like "@variable_name". There are also attribute accessor, attribute reader and attribute writer methods within a class. attr_reader creates a method that allows you to read a given instance variable outside of the class, attr_writer creates a method that allows you to write a given instance variable outside of the class, and attr_accessor creates two methods allowing you to both read and write a given instance variable outside of the class.
+
+3. Give an example of a real world object, and describe how you might assign its attributes if you were to design a class to represent that object.
+An example of a real world object is a piece of furniture. If I were to assign attributes to the object, I might give it an age of 1 year, a height of 3 feet, a width of 2 feet, a depth of 5 feet and a weight of 60 pounds. I would assign these attributes by giving each one an instance variable (@age = 1 year, @height = 3 feet, @width = 2 feet, etc). I would intialize these instance variables in an initialize method.
+
+4. What is the purpose of the initialize method? When does it run?
+It is a method that automatically runs every time I create a new instance of a class. It is basically a time saver, as it automatically creates arguments that can be used when we create an instance of a class.
+
+5. What are modules?
+Modules are toolkits. It is not a class, because it doesn't have attributes, and we don't need multiple copies of it. It is just a solitary set of behavior. In other words, it is a set of methods. 
+
+6. What are the different ways you can use a module?
+There are two main ways you might use a module. The first is to provide compartmentalization for methods. Instead of calling "some_method", you would simply call "somemodule.some_method" -- similar to how you might organize files into folders.
+The second main way to use a module is as a mixin. This means they are mixed in to classes to give classes more functionality.
