@@ -74,3 +74,11 @@ remove_item(new_list, "Lemonade", 2)
 update_quantity(new_list, "Ice Cream", 1)
 pretty_list(new_list)
 
+
+#COMMENTED REFLECTION SECTION
+#I learned that pseudocode can help structure your thinking before you dive into the full coding section. It lets you process what methods you will create and what paramaters you will pass and what code you will run, without dealing with the difficulties of syntax.
+#It seems like a hash is more useful in this type of situation, because you can then specify three values for various things instead of just one vowel. It actually connects value with the key, and unites them all under a heading("grocery_list").
+#A method returns the last line of the method or else whatever is designated with the return keyword.
+#You can pass in strings or fixnums or arrays or hashes, and more.
+#By calling ceach method within eachothers methods.
+#Honestly, it was really good to work with hashes. I hadnt even realized how little I knew. I think we could have worked more on this in earlier exercises. That would've been helpful.
