@@ -64,6 +64,7 @@ class VirusPredictor
 
 end
 
+
 #=======================================================================
 
 # DRIVER CODE
@@ -84,4 +85,4 @@ alaska.virus_effects
 
 
 #=======================================================================
-# Reflection Section
+# Reflection Section Here
