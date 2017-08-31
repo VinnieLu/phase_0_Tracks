@@ -123,36 +123,36 @@ function syncingObjects(object1, object2) {
 //Create a for loop with counter at 0, conditional at counter < integer, and increment at ++. Inside the loop, put sentence.push(wordGenerator).
 //Outside of the for loop, print sentence to the console.
 
+//I ended up having to un-nest the loops for this to work.
+
+function letterGenerator() {
+	var alphabet = "abcdefghijklmnopqrstuvwxyz";
+	var letter = Math.floor(Math.random() * 26);
+	return alphabet[letter]
+}
+
+function wordGenerator() {
+	var word = "";
+	var randomTen = Math.floor(Math.random() * 10);
+	for (var x = 0; x <= randomTen; x++) {
+		word += letterGenerator();
+	}
+	return word
+}
+
 function sentenceMaker(integer) {
-	sentence = []
-	function letterGenerator() {
-		alphabet = "abcdefghijklmnopqrstuvwxyz"
-		letter = Math.floor(Math.random() * 27)
-	}
-	function wordGenerator() {
-		word = ""
-		randomTen = Math.floor(Math.random() * 10)
-		for (x = 0; x <= randomTen; x++) {
-			word += letterGenerator
-		}
-	}
-	for (x = 0; x < integer; x++) {
-		sentence.push(wordGenerator)
+	var sentence = []
+	for (var x = 0; x < integer; x++) {
+		sentence.push(wordGenerator())
 	}
 	return sentence 
 }
 
+
 // console.log(sentenceMaker(3))
 
-// for(x = 0; x < 10; x++) {
-// 	completeSentences = sentenceMaker(Math.floor(Math.random() * 10))
-// 	console.log(completeSentences)
-// 	console.log(longestPhrase(completeSentences))
+// for (x = 0; x < 10; x++) {
+// 	var completeSentences = sentenceMaker(Math.floor(Math.random() * 10));
+// 	console.log(completeSentences);
+// 	console.log(longestPhrase(completeSentences));
 // }
-
-
-
-//Can I call function letterGenerator from inside of wordGenerator?
-//Can I push onto a string? Can I += onto a string?
-//Can I access the randomTen variable in the following for loop?
-//Can I define a function within a function?
