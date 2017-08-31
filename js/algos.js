@@ -32,7 +32,6 @@ function longestPhrase(array) {
 
 
 //------PROBLEM TWO------
-//THIS CODE WORKS
 
 //Create a function matchingObjects which takes two variables, objectOne and objectTwo
 //Create two empty arrays, an objectOnePropertiesValues, and an objectTwoPropertiesValues
@@ -51,24 +50,24 @@ function matchingObjects(objectOne, objectTwo) {
 		objectOnePropertiesValues.push(property);
 		objectOnePropertiesValues.push(objectOne[property]);
 	}
-	console.log(objectOnePropertiesValues);
+	// console.log(objectOnePropertiesValues);
 
 	for (var property in objectTwo) {
 		objectTwoPropertiesValues.push(property);
 		objectTwoPropertiesValues.push(objectTwo[property]);
 	}
-	console.log(objectTwoPropertiesValues);
+	// console.log(objectTwoPropertiesValues);
 
 	for(i = 0; i <= objectOnePropertiesValues.length - 1; i += 2){
 		if ((objectOnePropertiesValues[i] === objectTwoPropertiesValues[i]) && objectOnePropertiesValues[i + 1] === objectTwoPropertiesValues[i + 1]){
 			return true
 		}	
-	return false
 	}
+	return false
 }
 
 
-// console.log(matchingObjects({name: "Steven", age: 54}, {name: "Tamir", age: 54}, {animal: "Dog", legs: 4}, {animal: "Dog", legs: 3}));
+// console.log(matchingObjects({name: "Steven", age: 54}, {name: "Tamir", age: 54}));
 // console.log(matchingObjects({animal: "Dog", legs: 4}, {animal: "Dog", legs: 3}));
 // console.log(matchingObjects({syphilis: true, condom: "Oops, I forgot!"}, {needsTo: "poop", hopes: "thereIsTP"}));
 
@@ -79,7 +78,6 @@ function matchingObjects(objectOne, objectTwo) {
 
 
 //------PROBLEM TWO ALTERNATE SOLUTION------
-//THIS CODE ALMOST WORKS
 
 //Create a function called syncingObjects that takes two parameters, object1 and object2.
 //Create a for...in statement with property as the first value and object1 as the second value. In the body, write var object1Property equals property, and var object1Value equals object1[property].
@@ -95,15 +93,13 @@ function syncingObjects(object1, object2) {
 				return true
 			}
 		}
-		return false
 	}
+	return false
 }
 
-// console.log(syncingObjects({name: "Steven", age: 54}, {name: "Tamir", age: 54}, {animal: "Dog", legs: 4}, {animal: "Dog", legs: 3}));
+// console.log(syncingObjects({name: "Steven", age: 54}, {name: "Tamir", age: 54}));
 // console.log(syncingObjects({animal: "Dog", legs: 4}, {animal: "Dog", legs: 3}));
 // console.log(syncingObjects({syphilis: true, condom: "Oops, I forgot!"}, {needsTo: "poop", hopes: "thereIsTP"}));
-
-//Right now it is only checking first property with first property, second property with second property. Shouldn't it check first property with first and second property, then second property with first and second property??
 
 
 
