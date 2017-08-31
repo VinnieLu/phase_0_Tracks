@@ -20,6 +20,6 @@ new_string = (reverse("Happy Anniversary"))
 var isNamedVinnie = true;
 var isSuperCool = true;
 
-if (isNamedVinnie && isSuperCool) {
+if (1 === 1) {
 	console.log(new_string);
 }
