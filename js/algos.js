@@ -32,6 +32,7 @@ function longestPhrase(array) {
 
 
 //------PROBLEM TWO------
+//THIS CODE WORKS
 
 //Create a function matchingObjects which takes two variables, objectOne and objectTwo
 //Create two empty arrays, an objectOnePropertiesValues, and an objectTwoPropertiesValues
@@ -78,6 +79,7 @@ function matchingObjects(objectOne, objectTwo) {
 
 
 //------PROBLEM TWO ALTERNATE SOLUTION------
+//THIS CODE ALMOST WORKS
 
 //Create a function called syncingObjects that takes two parameters, object1 and object2.
 //Create a for...in statement with property as the first value and object1 as the second value. In the body, write var object1Property equals property, and var object1Value equals object1[property].
@@ -154,25 +156,3 @@ function sentenceMaker(integer) {
 //Can I push onto a string? Can I += onto a string?
 //Can I access the randomTen variable in the following for loop?
 //Can I define a function within a function?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
