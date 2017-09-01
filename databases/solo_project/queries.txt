@@ -1,0 +1,90 @@
+1.
+
+sqlite> SELECT * FROM movies;
+
+1|300|Stelios|2006|false|1
+2|Hunger|Bobby Sands|2008|true|2
+3|Inglourious Basterds|Lt. Archie Hicox|2009|false|1
+4|Prometheus|David 8|2012|true|3
+5|X-Men: Days of Future Past|Magneto|2014|true|3
+6|Macbeth|Macbeth|2015|true|2
+7|Steve Jobs|Steve Jobs|2015|true|2
+
+2.
+
+sqlite> UPDATE movies SET leadRole = "false" WHERE title = "X-Men: Days of Future Past";
+
+sqlite> SELECT * FROM movies WHERE id = 5;
+5|X-Men: Days of Future Past|Magneto|2014|false|3
+
+3.
+
+sqlite> SELECT * FROM movies, genres WHERE movies.genre_id = genres.id;
+1|300|Stelios|2006|false|1|1|Action
+2|Hunger|Bobby Sands|2008|true|2|2|Drama
+3|Inglourious Basterds|Lt. Archie Hicox|2009|false|1|1|Action
+4|Prometheus|David 8|2012|true|3|3|Sci-fi
+5|X-Men: Days of Future Past|Magneto|2014|false|3|3|Sci-fi
+6|Macbeth|Macbeth|2015|true|2|2|Drama
+7|Steve Jobs|Steve Jobs|2015|true|2|2|Drama
+
+4. 
+
+sqlite> SELECT movies.title, movies.year, genres.movieGenres FROM movies JOIN genres ON movies.genre_id = genres.id;
+300|2006|Action
+Hunger|2008|Drama
+Inglourious Basterds|2009|Action
+Prometheus|2012|Sci-fi
+X-Men: Days of Future Past|2014|Sci-fi
+Macbeth|2015|Drama
+Steve Jobs|2015|Drama
+
+5. 
+
+sqlite> DELETE FROM movies WHERE title = "Inglourious Basterds";
+sqlite> SELECT * FROM movies;
+1|300|Stelios|2006|false|1
+2|Hunger|Bobby Sands|2008|true|2
+4|Prometheus|David 8|2012|true|3
+5|X-Men: Days of Future Past|Magneto|2014|false|3
+6|Macbeth|Macbeth|2015|true|2
+7|Steve Jobs|Steve Jobs|2015|true|2
+
+
+<------RELEASE 3------>
+JOIN #1
+
+sqlite> SELECT movies.role, genres.movieGenres, movies.leadRole FROM movies INNER JOIN genres ON movies.genre_id = genres.id;
+Stelios|Action|false
+Bobby Sands|Drama|true
+David 8|Sci-fi|true
+Magneto|Sci-fi|false
+Macbeth|Drama|true
+Steve Jobs|Drama|true
+
+JOIN #2
+
+sqlite> SELECT movies.title, movies.year, movies.leadRole, genres.id FROM movies LEFT JOIN genres ON movies.genre_id = genres.id;
+300|2006|false|1
+Hunger|2008|true|2
+Prometheus|2012|true|3
+X-Men: Days of Future Past|2014|false|3
+Macbeth|2015|true|2
+Steve Jobs|2015|true|2
+
+JOIN #3
+
+sqlite> SELECT movies.title, movies.role, genres.movieGenres FROM movies RIGHT JOIN genres ON movies.genre_id = genres.id;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+
+<------doesn't because I'm using sql lite. Let me try a different one------>
+
+sqlite> SELECT movies.title, movies.role, genres.movieGenres FROM movies, genres WHERE movies.genre_id = genres.id;
+300|Stelios|Action
+Hunger|Bobby Sands|Drama
+Prometheus|David 8|Sci-fi
+X-Men: Days of Future Past|Magneto|Sci-fi
+Macbeth|Macbeth|Drama
+Steve Jobs|Steve Jobs|Drama
+
+
