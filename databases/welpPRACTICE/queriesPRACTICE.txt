@@ -1,0 +1,30 @@
+2.
+
+sqlite> SELECT users.firstName, reviews.comment, businesses.name, reviews.business_id, reviews.user_id FROM reviews INNER JOIN users ON reviews.user_id = users.id INNER JOIN businesses ON reviews.business_id = businesses.id;
+
+Bradford|Good tabouli|Grundy Hollow Wedding Chapel|1|1
+Angela|Smelled like urine.|Amir's Towing|2|3
+Steven|Always my go-to place.|The Beagle Nightclub|3|4
+
+3.
+
+sqlite> SELECT users.firstName, users.lastName, reviews.stars, reviews.comment, businesses.name FROM users LEFT JOIN reviews ON reviews.user_id = users.id LEFT JOIN businesses ON businesses.id = reviews.business_id;
+
+Bradford|Pitt|4|Good tabouli|Grundy Hollow Wedding Chapel
+Mandy|Kaling|||
+Angela|Jolie|1|Smelled like urine.|Amir's Towing
+Steven|Wonder|5|Always my go-to place.|The Beagle Nightclub
+Holly|Berry|||
+Merryl|Streepman|||
+Denzel|George|||
+
+4.
+
+https://www.xaprb.com/blog/2006/05/26/how-to-write-full-outer-join-in-mysql/
+
+
+
+
+
+
+
