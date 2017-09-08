@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>This page is awesome!</title>
+</head>
+<body>
+	<h1>This page is so awesome!</h1>
+	<form action="/awesome" method="post">
+		<input type="text" name="awesome" value="AWESOME!">
+		<input type="text" name="moreAwesome" value="Even more awesome!">
+		<input type="text" name="mostAwesome" value="Most awesome!">
+		<button type="submit">AWESOME cities!</button>
+	</form>
+	<form>
+		<input type="text" name="city" placeholder="city">
+		<button type="submit">Submit your campus</button>
+	</form>
+	<ol>
+    	<% @cities.each do |campus| %>
+    	<li><%= campus['city'] %></li>
+    	<% end %>
+  	</ol>
+</body>
+</html>
